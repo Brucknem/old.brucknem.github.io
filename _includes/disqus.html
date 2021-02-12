@@ -12,14 +12,14 @@
 <script src="{{ '/assets/js/lib/jquery.disqusloader.min.js' | relative_url }}"></script>
 <script>
   const options = {
-    scriptUrl: 'https://{{ site.disqus.shortname }}.disqus.com/embed.js',
+    scriptUrl: '//{{ site.disqus.shortname }}.disqus.com/embed.js',
     laziness: 1,
     throttle: 250,
     
     disqusConfig: function() {
       this.page.title = '{{ page.title }}';
       this.page.url = 'https://{{ site.disqus.shortname }}{{ page.url | absolute_url }}';
-      this.page.identifier = '{{ site.disqus.shortname }}';
+      this.page.identifier = '{{ page.url }}';
     }
   };
 
