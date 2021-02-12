@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Writing an About page"
+title:  "Writing an About page!"
 date:   2021-02-12 15:36:00 +0100
 categories: Setup 
 tags: about page
 pin: false
 ---
 
-# It's not easy
+# It's not easy!
 
 The first impression looks to be the most important one. Thats what the _About_
 page is for.
