@@ -4,5 +4,10 @@ icon: fas fa-info
 order: 4
 ---
 
+# Hi, welcome to my page!
 
-> **Note**: Add Markdown syntax content to file `_tabs/about.md` and it will show up on this page.
+I'm happy you found your way to my page.  
+Let me know that you were here by using the links on the bottom of the side bar.
+
+![An image showing me, Marcel Bruckner](/assets/img/me.jpg)
+_Me, Marcel Bruckner_

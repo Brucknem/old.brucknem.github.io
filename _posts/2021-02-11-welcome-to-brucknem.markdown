@@ -6,7 +6,7 @@ categories: Welcome
 tags: welcome
 pin: true
 ---
-### Hi there 👋
+# Hi there 👋
 
 - 🔭 I’m currently working on my [Guided Research](https://github.com/Brucknem/GuidedResearch) project at Providentia++.
 - 🌱 I’m currently learning Computer Vision based Camera Stabilization and Calibration techniques.
@@ -14,3 +14,9 @@ pin: true
 - 💬 Ask me about anything. I'm happy to discuss any topic and even more if I can help you. 
 - 📫 How to reach me: See bottom of left side bar.
 - ⚡ Fun fact: There are a lot of nice organisations like <a href="https://www.4ocean.com/" target="_blank">4Ocean</a> or <a href="https://www.germanzero.de" target="_blank">German Zero</a> that fight against worldwide pollution and climate change. They are always happy to get support.
+
+# Work in progress
+
+I started my page on 2021/11/02 and will update the contents as often as
+possible.  
+Stay tuned!
