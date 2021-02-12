@@ -144,11 +144,8 @@ defaults:
       path: ''
       type: tabs             # see `site.collections`
     values:
-  - tools
-  - docs
-  - README.md
-  - LICENSE
-  - gulpfile.js
+      layout: page
+      permalink: /:title/
       dynamic_title: true    # Hide title in mobile screens.
 
 sass:
