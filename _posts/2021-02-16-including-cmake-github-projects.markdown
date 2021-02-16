@@ -14,7 +14,7 @@ When I develop a CMake based project I often want to include other CMake project
 
 ## CMakeList.txt.in
 
-To make CMake aware of the other project just add a `CMakeList.txt.in` and paste the following snippet into it. Keep in mind to replace the `<PARTS-IN-BRACKETS>` with your own values. An example can be found at the end.
+To make CMake aware of the other project just add a `CMakeList.txt.in` and paste the following snippet into it. Keep in mind to replace the `<PARTS-IN-BRACKETS>` with your own values. An [example](#example) can be found at the end.
 
 ```cmake
 cmake_minimum_required(VERSION 2.8.12)
@@ -36,7 +36,7 @@ ExternalProject_Add(<OTHER-PROJECT>
 
 ## CMakeList.txt
 
-Now that CMake is aware of the project to include we can start building and including it. To do so add the following snippet to your projects `CMakeLists.txt`. Again, keep in mind to replace the `<OTHER-PROJECT>` with the value you chose in the `CMakeList.txt.in`. An example can be found at the end.
+Now that CMake is aware of the project to include we can start building and including it. To do so add the following snippet to your projects `CMakeLists.txt`. Again, keep in mind to replace the `<OTHER-PROJECT>` with the value you chose in the `CMakeList.txt.in`. An [example](#example) can be found at the end.
 
 ```cmake
 # Download and unpack the other project at configure time

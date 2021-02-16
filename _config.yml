@@ -114,6 +114,7 @@ kramdown:
     block:
       line_numbers: true
       start_line: 1
+  auto_ids: true
 
 # DO NOT change this unless you're a Pro user on Jekyll and Web development,
 # Or you think you're smart enough to change other relevant URLs within this template.
