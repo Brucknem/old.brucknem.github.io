@@ -2,7 +2,7 @@
 layout: post
 title:  "Include CMake projects from Github!"
 date:   2021-02-16 15:51:00 +0100
-categories: coding
+categories: Coding
 tags: snippets cmake github
 pin: false
 toc: true

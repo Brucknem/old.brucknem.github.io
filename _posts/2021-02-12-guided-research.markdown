@@ -2,7 +2,7 @@
 layout: post
 title:  "Automated Camera Stabilization and Calibration for Intelligent Transportation Systems"
 date:   2021-02-12 13:52:00 +0100
-categories: Studies 
+categories: Studies Coding
 tags: studies guided-research computer-vision
 pin: false
 mermaid: true
