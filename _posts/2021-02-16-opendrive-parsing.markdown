@@ -10,8 +10,9 @@ pin: false
 # Background
 
 During my [Guided Research]({% post_url 2021-02-12-guided-research %}) I was given a HD map of some part of the [highway A9 near Munich, Germany](https://www.google.de/maps/place/A9,+Garching+bei+M%C3%BCnchen/@48.2395578,11.632844,4154m/data=!3m1!1e3!4m5!3m4!1s0x47a11d231dc12da1:0xd702677ee0331ed4!8m2!3d48.2385588!4d11.637908).
-I use this map to get the world positions of landmarks like delineators, road signs, trees... These landmarks are then matched with some video footage of cameras mounted on gantry bridges. 
-Using the positions of the landmarks I then minimize the reprojection error to find the camera world position (the extrinsic parameters).
+I use this map to get the world positions of landmarks like delineators, road signs, trees... These landmarks are then matched with some video footage of cameras mounted on gantry bridges.  
+
+My final goal is to minimize the reprojection error from the landmarks and the corresponding video pixels to find the camera world position (the extrinsic parameters).
 
 # OpenDRIVE parser implementation
 
