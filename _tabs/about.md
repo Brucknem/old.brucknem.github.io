@@ -9,5 +9,5 @@ order: 4
 I'm happy you found your way to my page.  
 Let me know that you were here by using the links on the bottom of the side bar.
 
-![An image showing me, Marcel Bruckner](/assets/img/me.jpg)
+![An image showing me, Marcel Bruckner](/me.jpg)
 _Me, Marcel Bruckner_

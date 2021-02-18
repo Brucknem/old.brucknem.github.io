@@ -88,10 +88,10 @@ theme_mode:   # [light|dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn: ''
+img_cdn: 'https://raw.githubusercontent.com/Brucknem/CDN/main/blog'
 
 # the avatar on sidebar, support local or CORS resources
-avatar: /assets/img/favicons/android-icon-192x192.png
+avatar: /me_square.jpg
 
 # boolean type, the global switch for ToC in posts.
 toc: true

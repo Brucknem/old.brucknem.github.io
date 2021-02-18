@@ -24,19 +24,19 @@ The images each show a part of the highway A9 near Munich. In the images taken f
 
 ## Complete camera view
 
-![Map part of the highway A9](/assets/img/_posts/2021-02-16-opendrive-parsing/map_view.png){: width="100%"}
+![Map part of the highway A9](/posts/2021-02-16-opendrive-parsing/map_view.png){: width="100%"}
 _A part of the the highway A9 near Munich in the HD map_
 
 
-![Map part of the highway A9](/assets/img/_posts/2021-02-16-opendrive-parsing/camera_view.png){: width="100%"}
+![Map part of the highway A9](/posts/2021-02-16-opendrive-parsing/camera_view.png){: width="100%"}
 _More or less the same part of the the highway A9 near Munich viewed from a camera mounted on a gantry bridge_
 
 ## Zoomed towards the highway exit
 
-![Map part of the highway A9](/assets/img/_posts/2021-02-16-opendrive-parsing/map_exit.png){: width="100%"}
+![Map part of the highway A9](/posts/2021-02-16-opendrive-parsing/map_exit.png){: width="100%"}
 _The same part of the the highway A9 near Munich, zoomed towards the highway exit, in the HD map_
 
 
-![Map part of the highway A9](/assets/img/_posts/2021-02-16-opendrive-parsing/camera_exit.png){: width="100%"}
+![Map part of the highway A9](/posts/2021-02-16-opendrive-parsing/camera_exit.png){: width="100%"}
 _The same part of the the highway A9 near Munich, zoomed towards the highway exit, from a camera mounted on a gantry bridge_
 
