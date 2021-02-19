@@ -7,8 +7,6 @@ tags: about page
 pin: false
 ---
 
-# It's not easy!
-
 The first impression looks to be the most important one. Thats what the _About_
 page is for.
 

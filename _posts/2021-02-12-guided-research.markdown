@@ -8,7 +8,6 @@ pin: false
 mermaid: true
 ---
 
-# Background
 Within the [PROVIDENTIA++](https://www.bmvi.de/SharedDocs/DE/Artikel/DG/AVF-projekte/providentia-plusplus.html) project, a section of the highway A9 between Munich and Nuremberg was converted to a testing site for autonomous driving. As part of this, a large sensor network system has been set up along the highway to allow monitoring and steering of traffic as well as to improve the coordination between autonomous and traditional cars. The primary task of the intelligent system is to create a digital traffic twin that accurately represents the physical road situation in real-time. Based on this digital twin, the smart infrastructure can provide a far-reaching and comprehensive view to the drivers and autonomous cars in order to improve their situational awareness within the current traffic environment. A video about the PROVIDENTIA project is available on [YouTube](https://youtu.be/4oCnQlGFuc4).
 
 # Description

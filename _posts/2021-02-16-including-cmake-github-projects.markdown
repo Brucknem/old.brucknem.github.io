@@ -8,8 +8,6 @@ pin: false
 toc: true
 ---
 
-# Including CMake projects from Github with CMake is easy
-
 When I develop a CMake based project I often want to include other CMake projects into mine. Gladly CMake offers a quick and easy way on how to automatically pull the other project from [Github](https://github.com/), build it using its own `CMakeLists.txt` and make the results available to my own project.
 
 ## CMakeList.txt.in
@@ -33,7 +31,6 @@ ExternalProject_Add(<OTHER-PROJECT>
   TEST_COMMAND      ""
 )
 ```
-
 ## CMakeList.txt
 
 Now that CMake is aware of the project to include we can start building and including it. To do so add the following snippet to your projects `CMakeLists.txt`. Again, keep in mind to replace the `<OTHER-PROJECT>` with the value you chose in the `CMakeList.txt.in`. An [example](#example) can be found at the end.
