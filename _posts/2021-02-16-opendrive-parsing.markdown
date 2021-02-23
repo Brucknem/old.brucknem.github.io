@@ -66,7 +66,7 @@ _Roads are defined by stacking the geometric primitives. The primitives also def
 
 # Ongoing work
 
-I can now interpolate along the reference line to find the a part of the landmarks world positions. I am now working on how to apply the $$t$$-offset of the objects to get the final resulting position in the $$(x, y)$$-plane.
+I can now interpolate along the reference line to find a part of the landmarks world positions. I am now working on how to apply the $$t$$-offset of the objects to get the final resulting position in the $$(x, y)$$-plane.
 
 Afterwards I will implement the calculation of the height of the landmarks to finalize the HD map parsing and querying.
 
