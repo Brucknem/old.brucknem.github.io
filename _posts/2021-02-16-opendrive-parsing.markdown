@@ -30,9 +30,7 @@ The first thing I thought of was to use an XML to C++ compiler which should gene
 
 Eventually, after around one week of despair, I finally found out that our maps conform to the OpenDRIVE **V1.4** standard. I then gave the data binding compiler another try and _voila_, after another day of fiddling around, it works as I expect it to do and produces code that can parse the HD maps. I can now represent the data as a nice object model. _What a relief!_
 
-## Getting landmark positions
-
-I am now working on how to transform the landmark positions into a format so that I can use it in my camera pose estimation algorithm.
+## Geometric primitives define road segments
 
 OpenDRIVE defines [roads]({{ page.opendrive_url}}_roads) as a collection of five different [geometric primitives]({{ page.opendrive_url}}_geometry): [lines]({{ page.opendrive_url}}_straight_line), [spirals]({{ page.opendrive_url}}__spirals), [arcs]({{ page.opendrive_url}}_arc), [cubic polynoms]({{ page.opendrive_url}}_cubic_polynom) (which are deprecated) and [parametric cubic curves]({{ page.opendrive_url}}_parametric_cubic_curve). These primitives are stacked together along a [reference line]({{ page.opendrive_url}}_reference_line) and thus define the roads shape in the [$$(x, y)$$-plane]({{ page.opendrive_url}}_coordinate_systems). The plane itself is the earth [projected]({{ page.opendrive_url }}_georeferencing_in_opendrive) onto a flat surface. You can imaging this like unrolling the globe into a flat map. With the [parser](#converting-xml-to-c) from the previous section retrieving these primitives is straightforward. 
 
@@ -57,7 +55,20 @@ $$
 v(p) = aV + bV*p + cV*p^2 + dV*p^3
 $$
 
-I am now working on how to apply the $$t$$-offset of the objects to get the final resulting position.
+
+## Roads are composed by geometric primitives
+
+Roads often change their shape as they have to adjust to the local surface conditions and terrain properties. To model these changes OpenDRIVE composes roads by stacking geometric primitives. This gives the flexibility to model [arbitrary road shapes]({{ page.opendrive_url }}_generating_arbitrary_road_courses_from_geometry_elements).
+
+![Stacking geometric primitves]({{ page.post_cdn}}stacking_primitives.png ){: width="100%"}
+_Roads are defined by stacking the geometric primitives. The primitives also define the curvature and thus directly the angle of the steering wheel._
+
+
+# Ongoing work
+
+I can now interpolate along the reference line to find the a part of the landmarks world positions. I am now working on how to apply the $$t$$-offset of the objects to get the final resulting position in the $$(x, y)$$-plane.
+
+Afterwards I will implement the calculation of the height of the landmarks to finalize the HD map parsing and querying.
 
 # Implementation 
 
