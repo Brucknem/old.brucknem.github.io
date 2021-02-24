@@ -45,7 +45,12 @@ layout: default
       <div class="post-content">
 
         {% if page.image.src %}
+        <p>
           <img src="{{ page.image.src }}" class="preview-img" alt="{{ page.image.alt | default: "Preview Image" }}">
+          {% if page.image.caption %}
+            <em class="preview-caption">{{ page.image.caption }}</em>
+          {% endif %}
+        </p>
         {% endif %}
 
         {{ content }}

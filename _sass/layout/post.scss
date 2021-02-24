@@ -46,6 +46,12 @@
     margin-top: 0;
     margin-bottom: 2.5rem !important;
   }
+
+  .preview-caption {
+    @include align-center;
+
+    margin-top: -2rem !important;
+  }
 }
 
 .post-tail-wrapper {

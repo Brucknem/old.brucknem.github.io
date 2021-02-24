@@ -6,8 +6,9 @@ categories: Studies
 tags: coding guided-research autonomous-driving
 pin: false
 image: 
-    src: /posts/2021-02-16-opendrive-parsing/map_view.png
-    alt: A part of the the highway A9 near Munich in the HD map
+    src: /posts/2021-02-16-opendrive-parsing/highway_exit_south.png
+    alt: A part of the the highway A9 near Munich in a HD map.
+    caption: A part of the the highway A9 near Munich in a HD map.
 opendrive_url: https://www.asam.net/index.php?eID=dumpFile&t=f&f=3495&token=56b15ffd9dfe23ad8f759523c806fc1f1a90a0e8#
 math: true
 post_cdn: /posts/2021-02-16-opendrive-parsing/
@@ -64,11 +65,15 @@ Roads often change their shape as they have to adjust to the local surface condi
 _Roads are defined by stacking the geometric primitives. The primitives also define the curvature and thus directly the angle of the steering wheel._
 
 
+## Landmarks along the road with $$s$$ and $$t$$ coordinates
+
+The OpenDRIVE standard defines the locations of [objects]({{ page.opendrive_url}}_objects) and [signals]({{ page.opendrive_url}}_signals) relative to the reference line. The $$s$$-coordinate defines how far the object is from the start of the road. The $$t$$-coordinate defines how far the object is offset to the left or right of the reference line.
+
+Together with the roads world position, the geometries, the geometric primitives and the $$s$$- and $$t$$-coordinates I am now able to calculate the world position of the landmarks I am interested in (in the $$(x, y)$$-plane). Here are some google links with the coordinates that show a [tree](https://www.google.de/maps/place/48%C2%B010'33.8%22N+11%C2%B035'27.7%22E/@48.1760579,11.5888264,17z/data=!4m5!3m4!1s0x0:0x0!8m2!3d48.1760579!4d11.5910151), a [delineator](https://www.google.de/maps/place/48%C2%B010'30.5%22N+11%C2%B035'27.5%22E/@48.1751013,11.5908173,65m/data=!3m1!1e3!4m5!3m4!1s0x0:0x0!8m2!3d48.1751242!4d11.59098) and a [streetlamp](https://www.google.de/maps/place/48%C2%B010'32.7%22N+11%C2%B035'34.4%22E/@48.1757256,11.5927528,65m/data=!3m1!1e3!4m5!3m4!1s0x0:0x0!8m2!3d48.1757516!4d11.5928758). Be aware that the calculated positions from the HD map do not exactly align with the Google Maps positions as Google takes images from satellites in [low earth orbit](https://aerospace.csis.org/aerospace101/popular-orbits-101/#:~:text=The%20majority%20of%20satellites%20orbiting,full%20orbit%20around%20the%20Earth.), thus from a high of 160 km to 2000 km above ground. It's a wonder that Google can provide the google maps service at all with images taken from that far, so please be patient with any inaccuracy.
+
 # Ongoing work
 
-I can now interpolate along the reference line to find the a part of the landmarks world positions. I am now working on how to apply the $$t$$-offset of the objects to get the final resulting position in the $$(x, y)$$-plane.
-
-Afterwards I will implement the calculation of the height of the landmarks to finalize the HD map parsing and querying.
+As the calculation of the world positions is now finished in the $$(x, y)$$-plane I will now focus on the height of the objects. These can be calculated using the different road shape attributes, i.e. the [elevation]({{ page.opendrive_url}}_methods_of_elevation).
 
 # Implementation 
 
@@ -81,20 +86,20 @@ The images each show a part of the highway A9 near Munich. In the images taken f
 ## Complete camera view
 
 ![Map part of the highway A9]({{ page.post_cdn }}map_view.png){: width="100%"}
-_A part of the the highway A9 near Munich in the HD map_
+_A part of the the highway A9 near Munich in the HD map._
 
 
 ![Map part of the highway A9]({{ page.post_cdn }}camera_view.png){: width="100%"}
-_More or less the same part of the the highway A9 near Munich viewed from a camera mounted on a gantry bridge_
+_More or less the same part of the the highway A9 near Munich viewed from a camera mounted on a gantry bridge._
 
 ## Zoomed towards the highway exit
 
 ![Map part of the highway A9]({{ page.post_cdn }}map_exit.png){: width="100%"}
-_The same part of the the highway A9 near Munich, zoomed towards the highway exit, in the HD map_
+_The same part of the the highway A9 near Munich, zoomed towards the highway exit, in the HD map._
 
 
 ![Map part of the highway A9]({{ page.post_cdn }}camera_exit.png){: width="100%"}
-_The same part of the the highway A9 near Munich, zoomed towards the highway exit, from a camera mounted on a gantry bridge_
+_The same part of the the highway A9 near Munich, zoomed towards the highway exit, from a camera mounted on a gantry bridge._
 
 
 # References 
