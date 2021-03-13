@@ -7,7 +7,7 @@ tags: coding tutorials
 pin: true
 ---
 
-# https://blog.miguelgrinberg.com/post/video-streaming-with-flask
-How to stream the Raspberry Pi camera using flask.
+# How to stream the Raspberry Pi camera using flask.
 
-## https://github.com/Brucknem/CameraPi
+- [Original](https://blog.miguelgrinberg.com/post/video-streaming-with-flask)
+- [My implementation](https://github.com/Brucknem/CameraPi)
