@@ -35,9 +35,9 @@ disturbances.
 gantt
 Familiarisation                 : done,     des1,   2020-11-01, 2020-11-30
 Dynamic Stabilization           : done,     des2,   after des1, 2021-01-15
-Static Calibration              : active,   des3,   after des2, 2021-02-28
-Evaluation                      :           des4,   after des3, 2021-03-31
-Report                          :           des5,   after des4, 2021-04-12
+Static Calibration              : done,     des3,   after des2, 2021-02-28
+Evaluation                      : done,          des4,   after des3, 2021-03-31
+Report                          : active,          des5,   after des4, 2021-04-18
 ```
 
 ***
