@@ -4,7 +4,7 @@ title:  "Links to remark!"
 date:   2021-03-12 20:55:00 +0100
 categories: Coding
 tags: coding tutorials links
-pin: true
+pin: false
 ---
 
 # Papers
