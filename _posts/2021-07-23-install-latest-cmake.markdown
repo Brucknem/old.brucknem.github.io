@@ -3,7 +3,7 @@ layout: post
 title:  "How to install the latest CMake version from source"
 date:   2021-07-23 09:50:00 +0200
 categories: Coding
-tags: coding tutorials
+tags: coding tutorials install
 pin: false
 ---
 
@@ -39,7 +39,7 @@ cd $CMAKE_EXTRACTED_DIR
 NUM_CPU_CORES=$(grep -c ^processor /proc/cpuinfo)
 make -j $NUM_CPU_CORES
 
-sudo apt install checkinstall -y
+sudo apt install checkinstall libssl-dev -y
 sudo checkinstall --pkgname cmake
 ```
 
