@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Writing an About page!"
+title:  "Writing an About page"
 date:   2021-02-12 15:36:00 +0100
 categories: Setup 
 tags: about page

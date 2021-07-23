@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Getting data from OpenDRIVE HD maps!"
+title:  "Getting data from OpenDRIVE HD maps"
 date:   2021-02-18 19:55:00 +0100
 categories: Studies
 tags: coding guided-research autonomous-driving

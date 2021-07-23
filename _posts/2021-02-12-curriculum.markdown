@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "My journey!"
+title:  "My journey"
 date:   2021-02-12 13:26:00 +0100
 categories: Live 
 tags: live curriculum

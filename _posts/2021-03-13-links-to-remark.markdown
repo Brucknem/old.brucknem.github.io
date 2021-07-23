@@ -1,17 +1,34 @@
 ---
 layout: post
-title:  "Links to remark!"
+title:  "Links to remark"
 date:   2021-03-12 20:55:00 +0100
-categories: Coding
+categories: Links
 tags: coding tutorials links
 pin: false
 ---
 
 # Papers
 
-- A great paper explaining the ins and outs of <a href="
-https://lear.inrialpes.fr/pubs/2000/TMHF00/Triggs-va99.pdf" target="blank">Bundle Adjustment</a>
+# Repositories
+## Continual Learning
+- [https://github.com/chrhenning/hypercl](https://github.com/chrhenning/hypercl)
+- [https://github.com/rvl-lab-utoronto/HyperCRL](https://github.com/rvl-lab-utoronto/HyperCRL)
+- [https://github.com/optimass/continual_learning_papers](https://github.com/optimass/continual_learning_papers)
+- [https://github.com/TLESORT/Generative_Continual_Learning](https://github.com/TLESORT/Generative_Continual_Learning)
+- [https://github.com/jalexvig/associative_compression_networks](https://github.com/jalexvig/associative_compression_networks)
 
+## Deep Learning
+- [https://github.com/PyTorchLightning/pytorch-lightning](https://github.com/PyTorchLightning/pytorch-lightning)
+- [https://github.com/znxlwm/pytorch-generative-model-collections](https://github.com/znxlwm/pytorch-generative-model-collections)
+- [https://github.com/keras-team/keras](https://github.com/keras-team/keras)
+
+## Books
+- [https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
+- [https://github.com/changwookjun/StudyBook](https://github.com/changwookjun/StudyBook)
+
+## Utils
+- [https://github.com/jbeder/yaml-cpp](https://github.com/jbeder/yaml-cpp)
+- [https://github.com/cdr/code-server](https://github.com/cdr/code-server)
 
 # Tutorials
 
