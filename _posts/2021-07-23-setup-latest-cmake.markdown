@@ -36,7 +36,8 @@ NUM_CPU_CORES=$(grep -c ^processor /proc/cpuinfo)
 make -j $NUM_CPU_CORES
 
 sudo apt install checkinstall -y
-sudo checkinstall
+sudo checkinstall --pkgname cmake
+
 ```
 
 # References
