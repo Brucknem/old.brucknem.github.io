@@ -9,7 +9,11 @@ pin: false
 
 Run the following `shell` script to install the latest CMake version.
 
-# Installation
+The script will automatically check the for the latest CMake version and download the source from the [Github](https://github.com/Kitware/CMake/) repository. 
+
+The script then compiles the source and creates a `.deb` via `checkinstall`. Follow the instructions from `checkinstall` to install the compiled package.
+
+# Install
 ```shell
 # Check Version
 LOCATION=$(wget https://github.com/Kitware/CMake/releases/latest 2>&1 | grep Location | awk '{print $2}')
@@ -38,6 +42,11 @@ make -j $NUM_CPU_CORES
 sudo apt install checkinstall -y
 sudo checkinstall --pkgname cmake
 
+```
+
+# Uninstall
+```shell
+sudo dpkg -r cmake
 ```
 
 # References
