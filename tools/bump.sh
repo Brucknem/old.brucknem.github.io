@@ -1,34 +1,46 @@
 #!/usr/bin/env bash
 #
-# 1. Bump latest version number to files:
-#   - _sass/jekyll-theme-chirpy.scss
-#   - assets/js/.copyright.js
-#   - assets/js/dist/*.js (will be built by gulp later)
-#   - jekyll-theme-chirpy.gemspec
-#   - Gemfile.lock
-#   - package.json
+# How does it work:
 #
-# 2. Create a git-tag on release branch
+#   1. Cherry pick the latest commit from default branch
+#      to the target release branch if the target release branch already existed.
 #
-# 3. Build a RubyGems package base on the latest git-tag
+#   2. Bump latest version number to the following files:
+#
+#     - _sass/jekyll-theme-chirpy.scss
+#     - _javascript/copyright
+#     - assets/js/dist/*.js (will be built by gulp later)
+#     - jekyll-theme-chirpy.gemspec
+#     - package.json
+#
+#   3. Create a git-tag on release branch
+#
+#   4. Build a RubyGems package base on the latest git-tag
+#
+#
+# Usage:
+#
+#   Run on default branch, if run on other branch requires parameter '-m' (manual mode).
 #
 #
 # Requires: Git, Gulp, RubyGems
 
 set -eu
 
-manual_release=false
+opt_manual=false
 
 ASSETS=(
   "_sass/jekyll-theme-chirpy.scss"
-  "assets/js/.copyright"
+  "_javascript/copyright"
 )
 
 GEM_SPEC="jekyll-theme-chirpy.gemspec"
 
-GEM_LOCK="Gemfile.lock"
-
 NODE_META="package.json"
+
+DEFAULT_BRANCH="master"
+
+_working_branch="$(git branch --show-current)"
 
 _check_src() {
   if [[ ! -f $1 && ! -d $1 ]]; then
@@ -43,9 +55,9 @@ check() {
     exit -1
   fi
 
-  # ensure the current branch is 'master'
-  if [[ "$(git branch --show-current)" != "master" ]]; then
-    echo "Error: This operation must be performed on the 'master' branch!"
+  # ensure working on default branch or running in 'manual' mode
+  if [[ $_working_branch != $DEFAULT_BRANCH && $opt_manual == "false" ]]; then
+    echo "Error: This operation must be performed on the 'master' branch or '--manual' mode!"
     exit -1
   fi
 
@@ -75,17 +87,10 @@ _bump_node() {
     $NODE_META
 }
 
-_bump_gemlock() {
-  sed -i \
-    "s/jekyll-theme-chirpy ([[:digit:]]\+\.[[:digit:]]\+\.[[:digit:]]\+/jekyll-theme-chirpy ($1/" \
-    $GEM_LOCK
-}
-
 bump() {
   _bump_assets "$1"
   _bump_gemspec "$1"
   _bump_node "$1"
-  _bump_gemlock "$1"
 
   if [[ -n $(git status . -s) ]]; then
     git add .
@@ -102,6 +107,7 @@ release() {
   _version="$1"
   _major=""
   _minor=""
+  _new_release_branch=false
 
   IFS='.' read -r -a array <<< "$_version"
 
@@ -117,7 +123,7 @@ release() {
 
   _release_branch="$_major-$_minor-stable"
 
-  if $manual_release; then
+  if $opt_manual; then
     echo -e "Bump version to $_version (manual release)\n"
     bump "$_version"
     exit 0
@@ -125,10 +131,11 @@ release() {
 
   if [[ -z $(git branch -v | grep "$_release_branch") ]]; then
     git checkout -b "$_release_branch"
+    _new_release_branch=true
   else
     git checkout "$_release_branch"
     # cherry-pick the latest commit from master branch to release branch
-    git cherry-pick "$(git rev-parse master)"
+    git cherry-pick "$(git rev-parse $DEFAULT_BRANCH)"
   fi
 
   echo -e "Bump version to $_version\n"
@@ -140,11 +147,26 @@ release() {
   echo -e "Build the gem pakcage for v$_version\n"
   build_gem
 
-  # head back to master branch
-  git checkout master
-  # cherry-pick the latest commit from release branch to master branch
-  git cherry-pick "$_release_branch" -x
+  # head back to working branch
+  git checkout "$_working_branch"
 
+  if [[ $_working_branch == $DEFAULT_BRANCH ]]; then
+    if $_new_release_branch; then
+      git merge "$_release_branch"
+    fi
+  fi
+
+}
+
+help() {
+  echo "Bump new version to Chirpy project"
+  echo "Usage:"
+  echo
+  echo "   bash /path/to/bump.sh [options]"
+  echo
+  echo "Options:"
+  echo "     -m, --manual         Manual relase, bump version only."
+  echo "     -h, --help           Print this help information."
 }
 
 main() {
@@ -176,8 +198,12 @@ while (($#)); do
   opt="$1"
   case $opt in
     -m | --manual)
-      manual_release=true
+      opt_manual=true
       shift
+      ;;
+    -h | --help)
+      help
+      exit 0
       ;;
     *)
       echo "unknown option '$opt'!"
