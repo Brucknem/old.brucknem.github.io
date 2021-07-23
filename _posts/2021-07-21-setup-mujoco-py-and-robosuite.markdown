@@ -31,7 +31,7 @@ mv $HOME/Downloads/mjkey.txt $HOME/.mujoco/
 # Install dependencies
 sudo apt update -y && sudo apt upgrade -y
 
-sudo apt install libosmesa6-dev libgl1-mesa-glx libglfw3
+sudo apt install libosmesa6-dev libgl1-mesa-glx libglfw3 libglew-dev -y
 sudo ln -s /usr/lib/x86_64-linux-gnu/libGL.so.1 /usr/lib/x86_64-linux-gnu/libGL.so
 
 sudo add-apt-repository ppa:deadsnakes/ppa
