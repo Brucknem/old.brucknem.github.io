@@ -41,7 +41,11 @@ make -j $NUM_CPU_CORES
 
 sudo apt install checkinstall -y
 sudo checkinstall --pkgname cmake
+```
 
+# Check Installation
+```shell
+cmake --version
 ```
 
 # Uninstall
