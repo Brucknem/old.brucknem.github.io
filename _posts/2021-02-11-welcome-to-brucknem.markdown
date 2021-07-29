@@ -8,12 +8,13 @@ pin: true
 ---
 # Hi there 👋
 
-- 🔭 I’m currently working on my [Guided Research](https://github.com/Brucknem/GuidedResearch) project at Providentia++.
-- 🌱 I’m currently learning Computer Vision based Camera Stabilization and Calibration techniques.
-- 👯 I’m looking to collaborate on anything Computer Vision and Machine Learning related.
+- 🔭 I’m currently researching for my [Master Thesis](https://github.com/Brucknem/HyperCRL){:target="_blank"} at the [Chair of Robotics, Artificial Intelligence and Real-time Systems](https://www.in.tum.de/en/i06/home/){:target="_blank"}.
+- 🌱 I’m currently working as a student research assistant at the [Providentia++](https://innovation-mobility.com/en/){:target="_blank"} project.
+- 👯 I’m looking to collaborate on projects related to Computer Vision, Continual Learning and Reinforcement Learning.
 - 💬 Ask me about anything. I'm happy to discuss any topic and even more if I can help you. 
-- 📫 How to reach me: See bottom of left side bar.
-- ⚡ Fun fact: There are a lot of nice organisations like <a href="https://www.4ocean.com/" target="_blank">4Ocean</a> or <a href="https://www.germanzero.de" target="_blank">German Zero</a> that fight against worldwide pollution and climate change. They are always happy to get support.
+- 📫 How to reach me: The email related to this account if visible. Otherwise create an issue on any of my projects and I will respond to you.
+- ⚡ Fun fact: There are a lot of nice organisations like [4Ocean](https://www.4ocean.com/){:target="_blank"} or [German Zero](https://www.germanzero.de){:target="_blank"} that fight against worldwide pollution and climate change. They are always happy to get support.
+
 
 # Work in progress
 
